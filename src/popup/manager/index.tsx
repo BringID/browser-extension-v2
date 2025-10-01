@@ -49,7 +49,6 @@ class Manager implements IManager {
 
       try {
         const verification = await verifier.verify(
-          '',
           presentationData,
           credentialGroupId,
           String(identity.commitment),

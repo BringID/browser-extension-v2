@@ -272,19 +272,7 @@ const SidePanel: FC = () => {
                 // @ts-ignore
                 .catch((err) => {
                   console.error('Failed to open popup:', err);
-
-                  // if it wasnt open for some reason try again, because it can be due to service worker was not active initially but should wake up
-                  // @ts-ignore
-                  chrome.action.openPopup().then(() => {
-                    callback()
-                  })
-                  // @ts-ignore
-                  .catch((err) => {
-                    console.error('Failed to open popup:', err);
-                  })
                 })
-
-              
             }}
             onReject={() => {
               setShowResultOverlay(false);

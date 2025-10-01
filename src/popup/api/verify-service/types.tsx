@@ -11,7 +11,6 @@ type TVerifyResponse = {
 
 type TVerify = (
   apiUrl: string,
-  apiKey: string,
   presentationData: string,
   registry: string,
   credentialGroupId: string,
