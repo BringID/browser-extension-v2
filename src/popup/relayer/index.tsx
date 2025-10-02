@@ -1,12 +1,13 @@
 import IRelayer, { TCreateVerification, TGetVerification } from './types';
 import taskManager from '../api/task-manager';
 import configs from '../../configs';
+import { defineApiUrl } from '../../common/utils';
 
 class Relayer implements IRelayer {
   #apiUrl: string;
 
   constructor() {
-    this.#apiUrl = configs.TASK_MANAGER_API;
+    this.#apiUrl = defineApiUrl()
   }
 
   createVerification: TCreateVerification = async (

@@ -1,13 +1,12 @@
 import ISemaphore, { TGetProof, TCreateIdentity } from './types';
 import { indexer } from '../api';
-import { createSemaphoreIdentity } from '../../common/utils';
-import config from '../../configs';
+import { createSemaphoreIdentity, defineApiUrl } from '../../common/utils';
 
 class Semaphore implements ISemaphore {
   #apiUrl: string;
 
   constructor() {
-    this.#apiUrl = config.INDEXER_API;
+    this.#apiUrl = defineApiUrl()
   }
 
   getProof: TGetProof = async (identityCommitment, semaphoreGroupId) => {

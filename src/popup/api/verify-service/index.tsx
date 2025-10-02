@@ -1,19 +1,19 @@
 import api from '../../utils/api';
 import { TVerify, TVerifyResponse } from './types';
+import configs from '../../../configs';
 
 const verify: TVerify = (
   apiUrl,
-  apiKey,
   presentationData,
   registry,
   credentialGroupId,
   semaphoreIdentityCommitment,
 ) =>
   api<TVerifyResponse>(
-    `${apiUrl}/verify `,
+    `${apiUrl}/v1/verifier/base-sepolia/verify `,
     'POST',
     {
-      'x-api-key': apiKey,
+      'Authorization': `Bearer ${configs.ZUPLO_KEY}`,
     },
     {
       tlsn_presentation: presentationData,
