@@ -148,6 +148,37 @@
         "notarization": true
       }
     ]
+  },
+  {
+    "id": "5",
+    "title": "Farcaster Legit Followers",
+    "service": "Farcaster",
+    "description": "Prove you're followed by notable accounts like vitalik.eth, v, dwr.eth, jessepollak, or balajis.eth",
+    "icon": "https://farcaster.xyz/favicon.svg",
+    "permissionUrl": [
+      "https://client.farcaster.xyz/v2/onboarding-state",
+      "https://client.farcaster.xyz/v2/followers*",
+      "https://farcaster.xyz/*"
+    ],
+    "groups": [
+      {
+        "points": 10,
+        "semaphoreGroupId": "5",
+        "credentialGroupId": "6"
+      }
+    ],
+    "steps": [
+      {
+        "text": "Visit website"
+      },
+      {
+        "text": "Wait for request capture"
+      },
+      {
+        "text": "MPC-TLS verification progress",
+        "notarization": true
+      }
+    ]
   }
 ]
 
